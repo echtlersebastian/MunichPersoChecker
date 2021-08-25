@@ -61,7 +61,9 @@ export default function Subscribe() {
       axios.post('https://eu-central-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/persocheckerrealm-vyubq/service/AddContact/incoming_webhook/AddContact', newContact)
       .then(response => {
         if(response.status === 200){
-          toastSuccess();
+            toastSuccess();
+            setEmail("");
+            setNummer("");
         }
       }).catch(err => {
         toastError();
@@ -69,7 +71,6 @@ export default function Subscribe() {
       setEmail("");
       setNummer("");
     }else {
-      
       toastNoMail();
     }
   }
