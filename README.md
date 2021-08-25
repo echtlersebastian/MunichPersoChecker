@@ -14,7 +14,7 @@ this Service. Now everybody is able to recieve an Email, as soon, as the Persona
 
 
 # What it does:
- - Enter your E-Mail and your ausweisnummer
+ - Enter your E-Mail and your Ausweisnummer
  - it will get stored in a Database. Once a day a GitHub Action will trigger and do the following:
  - Checks every record with a Selenium Test by opening the Website muenchen.de/pass and entering the Ausweisnummer.
  - Checks if the status is "kann noch nicht abgeholt werden". 
