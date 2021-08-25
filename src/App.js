@@ -2,25 +2,36 @@ import React, { useState  } from "react";
 import './App.css';
 import axios from "axios";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [email, setEmail] = useState("");
   const [nummer, setNummer] = useState("");
+  const toastError = () => toast.error("Your Ausweisnummer is already in use! Please select another one!");
+  const toastSuccess = () => toast.success("You successfully enabled the E-Mail Notification! Happy waiting!");
 
   const handleSubmit = (evt) => {
-      evt.preventDefault();
-      
+    evt.preventDefault();
       const newContact = {
         email: email,
         number: nummer
       }
 
     axios.post('https://eu-central-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/persocheckerrealm-vyubq/service/AddContact/incoming_webhook/AddContact', newContact)
-        .then(response => console.log(response));
-
+        .then(response => {
+          if(response.status === 200){
+            toastSuccess();
+          }
+          }).catch(err => {
+            toastError();
+          });
+          setEmail("");
+          setNummer("");
   }
   return (
     <div className="App">
+      <ToastContainer/>
       <CookieConsent
   location="bottom"
   buttonText="Nothing happens on this button."
@@ -55,7 +66,6 @@ function App() {
                 
           <input type="submit" value="Submit" />
         </form>
-
    
       </header>
    
