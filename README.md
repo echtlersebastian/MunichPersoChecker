@@ -6,7 +6,7 @@ This is a Service that checks if your Personalausweis is ready to get picked up 
 
 
 
-# Why do the World need something like this?
+# Why does the World need something like this?
 The Guy at the counter in 🤡Bürgerbüro🤡 was telling me, that i will not get any notification about the status of my personalausweis. He said: "just check the website
 mentioned on the printed Abholschein and type in your Ausweisnummer. It is working like the Package Tracking at DHL". But it does not work like DHL. Because i get 
 notified about my packages at DHL. And i am that kind of guy, that forgets about an Personalausweis and will never Pick it up from the 🤡Bürgerbüro🤡. Thats why i wrote 
@@ -21,7 +21,7 @@ this Service. Now everybody is able to recieve an Email, as soon, as the Persona
  - If yes, nothing will happen, beause we need to wait longer. 
  - If no, the Status has changed and and email will be send out to the specific mailadress.
  - After the Mail is sent, the E-Mail and the Ausweisnummer will be *deleted* in the Database!
- - The Check runs once a day (i think, that higher frequent executions will just break the Internet at Bürgerbüro 🤡)
+ - The Check runs once a day (i think, that higher frequent executions will just break the Internet at 🤡Bürgerbüro🤡)
  
 # TechStack:
  - React Frontend
