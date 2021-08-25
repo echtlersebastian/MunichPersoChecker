@@ -1,6 +1,7 @@
 import React, { useState  } from "react";
 import './App.css';
 import axios from "axios";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -20,6 +21,16 @@ function App() {
   }
   return (
     <div className="App">
+      <CookieConsent
+  location="bottom"
+  buttonText="Nothing happens on this button."
+  cookieName="myAwesomeCookieName2"
+  style={{ background: "#2B373B" }}
+  buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+  expires={150}
+>
+  Absolutely no Cookie is used on this Website, so this text is completly useless.
+</CookieConsent>
       <header className="App-header">
         
         <p>
