@@ -1,9 +1,7 @@
-import React, { useState  } from "react";
+import React from "react";
 import './App.css';
-import axios from "axios";
-import validator from 'validator'
 import CookieConsent from "react-cookie-consent";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '@fontsource/roboto';
 import Subscribe from "./Subscribe";
