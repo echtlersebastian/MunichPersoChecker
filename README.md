@@ -32,3 +32,5 @@ this Service. Now everybody is able to recieve an Email, as soon, as the Persona
  If you need a new Personalausweis in Munich, you will get a Abholschein from the Bügerbüro. Just enter the Personalausweisnummer and your E-Mail and you are done! 🚀
  
  Have fun waiting for your new Personalausweis!
+ 
+ p.s. I'm super proud of exactly 69% Javascript in this Repo. 😎
