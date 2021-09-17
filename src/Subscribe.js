@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { toast } from 'react-toastify';
@@ -30,9 +29,8 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-  text: {
-    color: "white"
-  },
+
+
 }));
 
 
@@ -79,9 +77,13 @@ export default function Subscribe() {
         <Avatar className={classes.avatar}>
           <AccessAlarmIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
-          Subscribe here
-        </Typography>
+        <h2>
+          Get notified when your new ID card is ready for pickup
+        </h2>
+        <br />
+        <p>
+          Enter your e-mail address and ID card number ("Personalausweisnummer") here and you will be notified as soon as the status of your new ID card changes.
+        </p>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
             variant="outlined"
@@ -93,7 +95,7 @@ export default function Subscribe() {
             name="email"
             autoComplete="email"
             autoFocus
-            nputProps={{
+            InputProps={{
                 className: classes.input
               }}
             onChange={e=>setEmail(e.target.value)}
@@ -117,7 +119,7 @@ export default function Subscribe() {
             color="primary"
             className={classes.submit}
           >
-            Subscribe
+            Get notified
           </Button>
          
         </form>

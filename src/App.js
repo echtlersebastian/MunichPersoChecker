@@ -14,7 +14,7 @@ function App() {
       <ToastContainer/>
       <CookieConsent
   location="bottom"
-  buttonText="Alright, i got it!"
+  buttonText="Alright, I got it!"
   cookieName="myAwesomeCookieName2"
   style={{ background: "#2B373B" }}
   buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
@@ -24,21 +24,15 @@ function App() {
 </CookieConsent>
       <header className="App-header">
         
-        <p>
-        🎉🚀😍Welcome to the awesome Perso-Checker😍🚀🎉!
-    </p><Subscribe></Subscribe>
-          <h6>
-          🚀If you want to know what this tool does, check out the <a href="https://github.com/echtlersebastian/MunichPersoChecker">Repo</a> at Github!🚀
-            <br/>
-            <br/>
-            This tool is only working, if your Personalausweis was issued by one of the Bügerbüros in Munich.
-              <br/>
-          Enter your Mailadress and your Personalausweisnummer here, and you will get notified, as soon, as the status of your Personalausweis changes.
-            </h6>
-      
-      
-   
-   
+        <h1>
+          🎉🚀😍Welcome to the awesome Perso-Checker😍🚀🎉!
+        </h1>
+        <Subscribe></Subscribe>
+        <p><small>
+          Note: This tool is only working, if your Personalausweis was issued by one of the Bügerbüros in Munich.
+          <br/>
+          Made in Munich with ❤️ | Check out the <a href="https://github.com/echtlersebastian/MunichPersoChecker">project</a> on Github!
+        </small></p>
       </header>
     </div>
   );
